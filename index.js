@@ -83,7 +83,7 @@ document.getElementById("wordsRemaining").innerHTML = "Words remaining: "+german
 
 function checkWord() {
     var perfekt = germanVerbs[random];
-    if ((document.getElementById("perfekt").value === perfekt) === true) {
+    if ((document.getElementById("perfekt").value.toLowerCase() === perfekt.toLowerCase()) === true) {
         document.getElementsByClassName("ans")[0].innerHTML = "Your answer is right!";
         correct.push(random);
     }
