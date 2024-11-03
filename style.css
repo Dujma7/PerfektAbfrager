@@ -68,6 +68,7 @@ a, a:visited {
     background-color:#757c86;
     color: rgb(0, 0, 0);
     border-style: none;
+    margin: 10px;
 }
 
 #check:hover {
@@ -86,4 +87,9 @@ a, a:visited {
 
 .footer {
     color: #FCFAEE;
+}
+
+span {
+    color: #FCFAEE;
+    margin: 10px;
 }

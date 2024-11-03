@@ -72,8 +72,9 @@ const germanVerbsKeys = [
     "zerreißen"
 ];
 
-const correct = []
-const incorrect = []
+var rapid = 2000;
+const correct = [];
+const incorrect = [];
 
 var random = germanVerbsKeys[Math.floor(Math.random()*germanVerbsKeys.length)];
 var perfekt = germanVerbs[random];
@@ -82,9 +83,19 @@ document.getElementById("wordsRemaining").innerHTML = "Words remaining: "+german
 
 
 function checkWord() {
+    document.getElementById("check").disabled = true;
+    var checked = document.getElementById("rapid").checked
     var perfekt = germanVerbs[random];
-    console.log(document.getElementById("perfekt").value.toLowerCase()) 
-    console.log(perfekt.toLowerCase())
+    if (checked) {
+            rapid = 0;
+            document.getElementsByClassName("ans")[0].style.display = "none";
+        }
+        else {
+            rapid = 2000;
+            document.getElementsByClassName("ans")[0].style.display = "block";
+        }
+
+
     if ((document.getElementById("perfekt").value.toLowerCase() === perfekt.toLowerCase()) === true) {
         document.getElementsByClassName("ans")[0].innerHTML = "Your answer is right!";
         correct.push(random);
@@ -94,6 +105,8 @@ function checkWord() {
         document.getElementsByClassName("ans")[0].innerHTML = "Correct answer: "+perfekt;
         incorrect.push(random);
     }
+
+    
 
     setTimeout(function () {
         document.getElementById("perfekt").value = "";
@@ -112,10 +125,11 @@ function checkWord() {
         document.getElementById("wordsRemaining").innerHTML = "Words remaining: " + germanVerbsKeys.length.toString();
 
         if (germanVerbsKeys.length === 0) {
-            alert("Done! Your score " + correct.length.toString() + "/" + (correct.length + incorrect.length).toString());
+            alert("Fertig! Your score " + correct.length.toString() + "/" + (correct.length + incorrect.length).toString());
             window.location.reload();
         }
-    },3000); 
+    },rapid); 
+    document.getElementById("check").disabled = false;
 }
 
 
