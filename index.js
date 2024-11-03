@@ -115,7 +115,7 @@ function checkWord() {
             alert("Done! Your score " + correct.length.toString() + "/" + (correct.length + incorrect.length).toString());
             window.location.reload();
         }
-    },1000); 
+    },3000); 
 }
 
 

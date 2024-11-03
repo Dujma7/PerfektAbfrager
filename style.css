@@ -1,7 +1,8 @@
 body {
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    background-color: #686D76;
+    background-color: #181C14;
+    touch-action: pan-y;
 }
 
 h1 {
@@ -9,7 +10,7 @@ h1 {
     font-size: 4rem;
     padding: 50px;
     padding-bottom: 20px;
-    color: #292727;
+    color: #FCFAEE;
 }
 
 h3 {
@@ -30,16 +31,20 @@ h3 {
 }
 
 .middle {
-    padding-bottom: 150px;
+    padding-bottom: 250px;
 }
 
 a, a:visited {
     text-decoration: none;
-    color: #35374B;
+    color: #bebdb3;
+}
+
+.ans {
+    color: #FCFAEE;
 }
 
 .nr {
-    color: #292727;
+    color: #FCFAEE;
 }
 
 #perfekt {
@@ -49,7 +54,7 @@ a, a:visited {
     border-color:#575c64;
     margin: 20px;
     text-align: center;
-    color: #cbccce;
+    color: #fefeff;
 }
 
 #perfekt:focus {
@@ -60,7 +65,7 @@ a, a:visited {
     height: 50px;
     width: 100px;
     font-size: 0.8rem;
-    background-color:#575c64;
+    background-color:#757c86;
     color: rgb(0, 0, 0);
     border-style: none;
 }
@@ -73,8 +78,8 @@ a, a:visited {
     h1 {
         font-size: 3rem;
     }
+}
 
-    h3 {
-        font-size: 2rem;
-    }
+.footer {
+    color: #FCFAEE;
 }
