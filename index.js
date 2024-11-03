@@ -91,7 +91,7 @@ function checkWord() {
     }
 
     else {
-        document.getElementsByClassName("ans")[0].innerHTML = "Your answer is wrong! Correct answer: "+perfekt;
+        document.getElementsByClassName("ans")[0].innerHTML = "Correct answer: "+perfekt;
         incorrect.push(random);
     }
 

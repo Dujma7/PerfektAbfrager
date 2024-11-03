@@ -78,6 +78,10 @@ a, a:visited {
     h1 {
         font-size: 3rem;
     }
+
+    .ans {
+        font-size: 0.8rem;
+    }
 }
 
 .footer {
